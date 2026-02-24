@@ -1,0 +1,18 @@
+// index.php
+
+<?php
+session_start();
+
+echo "<h1>Index.php</h1>"; ?>
+
+<form action="nickname.php">
+    <fieldset>
+        <label for="nickname">Veuillez renseigner votre pseudonyme</label>
+        <input type="text" name="nickname"/>
+    </fieldset>
+    <fieldset>
+        <input type="submit" value="Valider"/>
+    </fieldset>
+</form>
+
+<a href="logout.php">Déconnexion</a>

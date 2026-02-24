@@ -1,27 +1,26 @@
 
 <?php
-//1- Si une couleur est envoyée en POST → on la met dans un cookie
+//1- Si une couleur est envoyée en POST ==>on la met dans un cookie
 
-$cssFile =  '';  // le couleur par defaault
 
 if (isset($_POST['color'])) {
- setcookie('theme', $_POST['color']); 
+ setcookie('theme', $_POST['color'],time()+3600));  // créer un cookies 
   $_COOKIE['theme'] = $_POST['color'];
+
 }
+
+$cssFile =  '';  
 
 //2- si cookie exist:
 if( $_COOKIE['theme'] ){
-    if( $_COOKIE['theme']  === 'red.css'){
+    if( $_COOKIE['theme']  === 'rouge'){
         $cssFile = 'red.css';
-    }else if ( $_COOKIE['theme'] === 'blue.css'){
+    }else if ( $_COOKIE['theme'] === 'blue'){
          $cssFile = 'blue.css';
     }else{
         $cssFile =  'default.css'; 
     }
 }
-
-
-
 
 ?>
 <!doctype html>

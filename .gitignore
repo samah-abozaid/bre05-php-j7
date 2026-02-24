@@ -1,0 +1,16 @@
+# Fichier d'environnement (contient mots de passe)
+.env
+
+# Dossier vendor (dépendances Composer)
+vendor/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers IDE (optionnel)
+.vscode/
+.idea/
+
+# Logs
+*.log
